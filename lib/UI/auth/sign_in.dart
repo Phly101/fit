@@ -1,6 +1,5 @@
-
 import 'package:fitmeals/UI/auth/sign_up.dart';
-import 'package:fitmeals/UI/home/home.dart';
+//import 'package:fitmeals/UI/home/home.dart';
 import 'package:flutter/material.dart';
 
 
@@ -31,7 +30,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
     if (_formKey.currentState!.validate()) {
 
-      Navigator.pushNamed(context, HomeScreen.routeName);
+      // Navigator.pushNamed(context, HomeScreen.routeName);
     } else {
 
       setState(() => _autoValidate = true);
