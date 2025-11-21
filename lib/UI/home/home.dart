@@ -1,4 +1,4 @@
-//import 'package:fitmeals/UI/settings/settings.dart';
+import 'package:fitmeals/UI/settings/settings.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _topBar(() {
-              //  Navigator.pushNamed(context, SettingsScreen.routeName);
+                Navigator.pushNamed(context, SettingsScreen.routeName);
               }),
 
               const SizedBox(height: 15),
