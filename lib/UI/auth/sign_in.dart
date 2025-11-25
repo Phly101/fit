@@ -1,5 +1,5 @@
 import 'package:fitmeals/UI/auth/sign_up.dart';
-//import 'package:fitmeals/UI/home/home.dart';
+import 'package:fitmeals/UI/home/home.dart';
 import 'package:flutter/material.dart';
 
 
@@ -30,7 +30,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
     if (_formKey.currentState!.validate()) {
 
-      // Navigator.pushNamed(context, HomeScreen.routeName);
+      Navigator.pushNamed(context, HomeScreen.routeName);
     } else {
 
       setState(() => _autoValidate = true);
@@ -63,10 +63,10 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Tabs (Sign In / Sign Up)
+
                 Row(
                   children: [
-                    // --- Sign In Tab (Active) ---
+
                     Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 18,
@@ -77,7 +77,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            // Corrected usage for opacity
+
                             color: Colors.black.withValues(alpha: 0.07),
                             blurRadius: 8,
                             offset: const Offset(0, 4),
@@ -94,7 +94,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     const SizedBox(width: 12),
-                    // --- Sign Up Tab (Inactive) ---
+
                     GestureDetector(
                       onTap: () {
 
@@ -114,7 +114,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 const SizedBox(height: 35),
 
-                // --- Email Field ---
+
                 TextFormField(
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
@@ -122,7 +122,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     if (value == null || value.isEmpty) {
                       return "Email is required";
                     }
-                    // Robust email format validation
+
                     final emailRegex = RegExp(
                         r'^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$');
                     if (!emailRegex.hasMatch(value)) {
@@ -143,7 +143,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 const SizedBox(height: 15),
 
-                // --- Password Field ---
+
                 TextFormField(
                   controller: passwordController,
                   obscureText: true,
@@ -154,7 +154,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     if (value.length < 8) {
                       return "Password must be at least 8 characters long";
                     }
-                    // Additional check for complexity (optional but good practice)
+
                     if (!RegExp(r'[A-Z]').hasMatch(value)) {
                       return "Requires at least one uppercase letter";
                     }
@@ -173,7 +173,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 const SizedBox(height: 25),
 
-                // --- Sign In Button ---
+
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -185,7 +185,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                       elevation: 4,
                     ),
-                    onPressed: _signIn, // Calls the sign-in and validation logic
+                    onPressed: _signIn,
                     child: const Text(
                       "Sign In",
                       style: TextStyle(
@@ -198,11 +198,11 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 const SizedBox(height: 10),
 
-                // --- Forgot Password Link ---
+
                 Center(
                   child: TextButton(
                     onPressed: () {
-                      // Handle forgot password flow
+
                     },
                     child: const Text(
                       "Forgot Password?",
@@ -215,7 +215,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Divider(color: Colors.grey.shade300, thickness: 1),
                 const SizedBox(height: 15),
 
-                // --- Social Buttons ---
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -227,7 +227,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                 const SizedBox(height: 30),
 
-                // --- Sign Up link ---
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -243,7 +243,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       child: const Text(
                         "Sign Up",
                         style: TextStyle(
-                          color: primaryGreen, // Use primary color for link
+                          color: primaryGreen,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

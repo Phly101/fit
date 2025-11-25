@@ -9,10 +9,10 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  // Dietary options
+
   String selectedDiet = "Vegan";
 
-  // Toggles
+
   bool darkMode = false;
   bool notifications = false;
 
@@ -91,9 +91,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  /// ---------------------------
-  ///   HEADER
-  /// ---------------------------
+
   Widget _header(BuildContext context) {
     return Row(
       children: [
@@ -120,10 +118,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ],
     );
   }
-
-  /// ---------------------------
-  ///   PROFILE SECTION
-  /// ---------------------------
   Widget _profileSection() {
     return Row(
       children: const [
@@ -140,9 +134,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  /// ---------------------------
-  /// DIET OPTION ITEM
-  /// ---------------------------
   Widget _dietOption(String label) {
     return Container(
       decoration: BoxDecoration(
@@ -163,9 +154,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  /// ---------------------------
-  /// SWITCH ITEM (Dark Mode, Notifications)
-  /// ---------------------------
+
   Widget _switchTile({
     required String title,
     required bool value,
@@ -187,9 +176,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  /// ---------------------------
-  /// SIGN OUT BUTTON
-  /// ---------------------------
+
   Widget _signOutButton() {
     return SizedBox(
       width: double.infinity,

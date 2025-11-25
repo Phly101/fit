@@ -33,7 +33,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Tabs
+
                 Row(
                   children: [
                     GestureDetector(
@@ -68,7 +68,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                 const SizedBox(height: 35),
 
-                // Full Name
                 TextFormField(
                   controller: fullNameController,
                   validator: (value) {
@@ -93,7 +92,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                 const SizedBox(height: 15),
 
-                // Email
                 TextFormField(
                   controller: emailController,
                   validator: (value) {
@@ -145,7 +143,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                 const SizedBox(height: 25),
 
-                // Create Account Button
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
